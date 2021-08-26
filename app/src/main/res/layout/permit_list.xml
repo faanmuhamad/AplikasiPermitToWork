@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="4">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/permit_no_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="Test"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/permit_area_kerja_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="Test"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/permit_status_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="Test"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/notification_permit"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_weight="1">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/notification_icon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_baseline_notifications_24" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </TableRow>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,864 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBgPrimary"
+    tools:context=".PengajuanPermitActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:background="@drawable/layout_border"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pengawas"
+            android:textColor="@android:color/black" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/pengajuan_pengawas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@android:color/black"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="Area Kerja"
+            android:textColor="@android:color/black" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/pengajuan_area_kerja"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Area Kerja"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lokasi / Jn"
+            android:textColor="@android:color/black" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/pengajuan_lokasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Lokasi / Jn"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Uraian"
+            android:textColor="@android:color/black" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/pengajuan_uraian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Uraian"
+            android:inputType="textLongMessage" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Durasi"
+            android:textColor="@android:color/black" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/pengajuan_durasi_sebelum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Before"
+                android:focusable="false"
+                android:inputType="date" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/pengajuan_durasi_sesudah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="After"
+                android:focusable="false"
+                android:inputType="date" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/q1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/q1_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_marginEnd="10dp"
+                    android:text="Yes" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/q1_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:text="No"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/q1_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:textColor="@android:color/black"
+                    android:text="Tersedia jalur penyelamatan darurat dan bebas dari hambatan"/>
+
+            </RadioGroup>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/q2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/q2_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_marginEnd="10dp"
+                    android:text="Yes" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/q2_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:text="No"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/q2_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:textColor="@android:color/black"
+                    android:text="Identifikasi bahaya sudah dilakukan"/>
+
+            </RadioGroup>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/q3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/q3_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_marginEnd="10dp"
+                    android:text="Yes" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/q3_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:text="No"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/q3_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:textColor="@android:color/black"
+                    android:text="Pekerjaan diawasi oleh orang yang telah ditunjuk"/>
+
+            </RadioGroup>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/q4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/q4_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_marginEnd="10dp"
+                    android:text="Yes" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/q4_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:text="No"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/q4_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:textColor="@android:color/black"
+                    android:text="Pencahayaan cukup"/>
+
+            </RadioGroup>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/q5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/q5_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_marginEnd="10dp"
+                    android:text="Yes" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/q5_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:text="No"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/q5_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:textColor="@android:color/black"
+                    android:text="Bahaya listrik sudah di isolasi dan di tag"/>
+
+            </RadioGroup>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/q6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/q6_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_marginEnd="10dp"
+                    android:text="Yes" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/q6_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:text="No"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/q6_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:textColor="@android:color/black"
+                    android:text="Tersedia alat komunikasi darurat : HP / HT / Tali / APAR / Tandu / Air Minum / harness, dll"/>
+
+            </RadioGroup>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/q7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/q7_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_marginEnd="10dp"
+                    android:text="Yes" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/q7_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:text="No"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/q7_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:textColor="@android:color/black"
+                    android:text="Tersedia alat komunikasi"/>
+
+            </RadioGroup>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/q8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/q8_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_marginEnd="10dp"
+                    android:text="Yes" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/q8_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:text="No"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/q8_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:textColor="@android:color/black"
+                    android:text="Terdapat personil yang mengontrol di pintu masuk"/>
+
+            </RadioGroup>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/q9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/q9_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_marginEnd="10dp"
+                    android:text="Yes" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/q9_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:text="No"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/q9_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:textColor="@android:color/black"
+                    android:text="Bahaya mekanik sudah di isolasi dan di tag"/>
+
+            </RadioGroup>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/q10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/q10_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_marginEnd="10dp"
+                    android:text="Yes" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/q10_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:text="No"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/q10_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:textColor="@android:color/black"
+                    android:text="Bahaya tersandung dan tergelincir sudah di identifikasi dan di proteksi"/>
+
+            </RadioGroup>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/q11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/q11_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_marginEnd="10dp"
+                    android:text="Yes" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/q11_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:text="No"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/q11_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:textColor="@android:color/black"
+                    android:text="Terpasang tanda yang menunjukkan area ruang terbatas"/>
+
+            </RadioGroup>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/q12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/q12_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_marginEnd="10dp"
+                    android:text="Yes" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/q12_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:text="No"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/q12_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:textColor="@android:color/black"
+                    android:text="Bahaya biologi sudah di identifikasi dan di proteksi"/>
+
+            </RadioGroup>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/q13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/q13_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_marginEnd="10dp"
+                    android:text="Yes" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/q13_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:text="No"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/q13_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:textColor="@android:color/black"
+                    android:text="Area sudah dibebaskan dari bahan mudah menyala"/>
+
+            </RadioGroup>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/q14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/q14_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_marginEnd="10dp"
+                    android:text="Yes" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/q14_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:text="No"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/q14_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:textColor="@android:color/black"
+                    android:text="JSA / HIRAC terpasang di area kerja dan telah di sampaikan kepada anggota"/>
+
+            </RadioGroup>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/q15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/q15_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_marginEnd="10dp"
+                    android:text="Yes" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/q15_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:text="No"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/q15_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:textColor="@android:color/black"
+                    android:text="Tersedia ventilasi yang cukup"/>
+
+            </RadioGroup>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/q16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/q16_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_marginEnd="10dp"
+                    android:text="Yes" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/q16_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:text="No"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/q16_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:textColor="@android:color/black"
+                    android:text="Alat pemadam api ringan telah dipersiapkan"/>
+
+            </RadioGroup>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/q17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/q17_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_marginEnd="10dp"
+                    android:text="Yes" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/q17_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:text="No"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/q17_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:textColor="@android:color/black"
+                    android:text="Personil menggunakan APD yang benar dan layak"/>
+
+            </RadioGroup>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/q18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/q18_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_marginEnd="10dp"
+                    android:text="Yes" />
+
+                <androidx.appcompat.widget.AppCompatRadioButton
+                    android:id="@+id/q18_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:text="No"
+                    android:gravity="center"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/q18_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8"
+                    android:textColor="@android:color/black"
+                    android:text="Tabung gas, selang dan torch tidak ada yang bocor"/>
+
+            </RadioGroup>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:paddingBottom="20dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/pengajuan_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorPrimary"
+                android:layout_gravity="center"
+                android:text="Save"
+                android:textColor="@android:color/white" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</ScrollView>

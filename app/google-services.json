@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "678948761318",
+    "firebase_url": "https://workpermit-c6593.firebaseio.com",
+    "project_id": "workpermit-c6593",
+    "storage_bucket": "workpermit-c6593.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:678948761318:android:859a71f94c5dd5f7a19527",
+        "android_client_info": {
+          "package_name": "com.example.workpermit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "678948761318-cd52gu1unujiiumujfiavmpa83o8hkvs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIp95diqhFcU51Pr_N8-Ck4ZrmLUr55YU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "678948761318-cd52gu1unujiiumujfiavmpa83o8hkvs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
